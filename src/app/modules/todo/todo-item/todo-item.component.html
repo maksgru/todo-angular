@@ -1,0 +1,13 @@
+<mat-card class="todo-item">
+  <div class="todo-body">
+    <p>{{ todo.title }}</p>
+    </div>
+    <div class="todo-buttons">
+      <button class="todo-btn-toggle" [class.done]="todo.completed" mat-icon-button aria-label="done" (click)="toggleTodo()">
+        <mat-icon>{{ todoDoneIcon }}</mat-icon>
+      </button>
+      <button class="todo-btn-del" mat-icon-button aria-label="clear" (click)="deleteTodo(todo.id)">
+        <mat-icon>clear</mat-icon>
+      </button>
+  </div>
+</mat-card>
